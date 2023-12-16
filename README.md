@@ -3,7 +3,7 @@ This is the compilation of the first of two semesters of a solo reseach project 
 
 
 ## Abstract
-The goal of this project is to assess correlations between qubit features and ultimately predict error probability. In the context of quantum computing, quantum bits (qubits) serve as the fundamental units for information processing, comparable to classical bits in conventional computers that store and process data using 1s and 0s. Quantum gates, analogous to classical logic gates such as NOT and OR, are employed to manipulate qubit states. The project involved the application of time series analysis to examine 7-qubit systems, notably ibm_perth, over a span of 315 days. Additionally, normal regression analysis was conducted for 127-qubit systems over a one-day period, instead treating each individual qubit as a data point, encompassing seven unique systems. Evaluation of prediction accuracy was carried out using root mean square error (RMSE) and R-squared (R2), commmon regression techniques. The results indicate a limited predictive capability of qubit features in relation to error rates when employing linear and low-order polynomials. Notably, a stronger correlation was noted across qubits compared to across time. Future exploration involves investigating the discrepancy between the correlation matrix and the error coefficients, and a comprehensive understanding of the relationship between qubit features and error rates may enhance error mitigation when integrated with existing models.
+The goal of this project is to assess correlations between qubit features and ultimately predict error probability. In the context of quantum computing, quantum bits (qubits) serve as the fundamental units for information processing, comparable to classical bits in conventional computers that store and process data using 1s and 0s. Quantum gates, analogous to classical logic gates such as NOT and OR, are employed to manipulate qubit states. The project involved the application of time series analysis to examine 7-qubit systems, notably 'ibm_perth', over a span of 315 days. Additionally, normal regression analysis was conducted for 127-qubit systems over a one-day period, instead treating each individual qubit as a data point, encompassing seven unique systems. Evaluation of prediction accuracy was carried out using root mean square error (RMSE) and R-squared (R2), commmon regression techniques. The results indicate a limited predictive capability of qubit features in relation to error rates when employing linear and low-order polynomials. Notably, a stronger correlation was noted across qubits compared to across time. Future exploration involves investigating the discrepancy between the correlation matrix and the error coefficients, and a comprehensive understanding of the relationship between qubit features and error rates may enhance error mitigation when integrated with existing models.
 
 ## Introduction
 First, what is a quantum computer [1]? To put it simply, it is a computer that uses quantum bits (qubits) to process information. Two notable features of a quantum computer allow it to be much more powerful than a classical computer:
@@ -23,7 +23,38 @@ Predicting gate error probability in the context of quantum computing estimating
 
 
 ## Methods
+### 1. Data Collection
+#### 1.1 Qsikit SDK and IBM Machines
+For data collection, I utilized the Qiskit SDK [4], which provided access to IBM quantum computers.
 
+#### 1.2 Quantum Processors and Data Length
+One 7-qubit processor and seven 127-qubit processors were utilized:
+ * 'ibm_perth': a 7-qubit system based on the Falcon processor, with 315 days of data
+ * 'ibm_brisbane', 'ibm_cusco', 'ibm_kawasaki', 'ibm_kyoto', 'ibm_nazca', 'ibm_quebec', 'ibm_sherbrooke': 127-qubit systems based on the Eagle processor, with one day of data for each system compiled into one dataset
+
+### 2. Preprocessing
+#### Qubit Features
+The following qubit features were considered [5]:
+ * Decoherence time (T1 and T2)
+ * Frequency, anharmonicity
+ * Readout assignment error ('prob meas0 prop1' and 'prob meas1 prop0'), readout length
+ * gate time
+ * ID, rz, sx, Pauli-X (NOT gate), reset, √x gate errors
+ * controlled NOT (CNOT) gate error (exclusive to 7-qubit)
+ * ECR gate error (exclusive to 127-qubit)
+
+All features were scaled to have a standard deviation of 1.
+
+### 3. Time Series Analysis of CNOT Gate Error on 'ibm_perth'
+#### LASSO Regression
+LASSO Regression was employed for its simplicity and feature selection capabilities [6].
+* $\min_{w} { \frac{1}{2n_{\text{samples}}} \|X w - y\|_2 ^ 2 + \alpha \|w\|_1}$
+  * $n_{samples}$: number of samples
+  * $X$: input features (independent variables)
+  * $y$: target value (in this case, CNOT error)
+  * $w$: coefficient vector
+  * $a\|w\|_1$: LASSO regularization
+#### Polynomial Regression
 ## Results
 ## Discussion
 ## References
