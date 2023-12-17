@@ -143,4 +143,3 @@ https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/
 [5] B. Baheri, Q. Guan, V. Chaudhary and A. Li, "Quantum Noise in the Flow of Time: A Temporal Study of the Noise in Quantum Computers," 2022 IEEE 28th International Symposium on On-Line Testing and Robust System Design (IOLTS), Torino, Italy, 2022, pp. 1-5, doi: 10.1109/IOLTS56730.2022.9897404.
 
 [6] scikit-learn documentation. Version 1.3.2. https://scikit-learn.org/stable/modules/linear_model.html
-
