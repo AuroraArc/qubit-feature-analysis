@@ -91,7 +91,7 @@ The optimal $\alpha$-regularization parameter value was found to be $0.11$.
 THe results suggest that qubit data over other qubits is slightly predictive of the error rate but still exhibits a poor score.
 
 ### 3. Correlation Matrix
-
+![Correlation Matrix](https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png)
 
 ## Discussion
 ## References
