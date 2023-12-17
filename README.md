@@ -91,7 +91,18 @@ The optimal $\alpha$-regularization parameter value was found to be $0.11$.
 THe results suggest that qubit data over other qubits is slightly predictive of the error rate but still exhibits a poor score.
 
 ### 3. Correlation Matrix
-![Correlation Matrix](https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png)
+<p align="center">
+  <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png" />
+</p>
+
+Some things to note from the visualization of the matrix as a heatmap are the decoherence times(T$_1$, T$_2$) show a negative relationship across the other variables. The anharmonicity values seems to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other. This is interesting because the correlation matrix seem to tell that there should be some correlation across some of the features, so the predictive power should be higher.
+
+### 4. ECR Plot
+<p align="center>
+  <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/scatterplot.png" />
+</p>
+
+
 
 ## Discussion
 ## References
