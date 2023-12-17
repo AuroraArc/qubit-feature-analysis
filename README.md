@@ -95,14 +95,52 @@ THe results suggest that qubit data over other qubits is slightly predictive of 
   <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/corrmatrix.png" />
 </p>
 
-Some things to note from the visualization of the matrix as a heatmap are the decoherence times(T$_1$, T$_2$) show a negative relationship across the other variables. The anharmonicity values seems to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other. This is interesting because the correlation matrix seem to tell that there should be some correlation across some of the features, so the predictive power should be higher.
+Some things to note from the visualization of the matrix as a heatmap are the decoherence times(T$_1$, T$_2$) show a negative relationship across the other variables. The anharmonicity values seems to be neutral across all variables. Most notably, the probability errors ('prob meas0 prop1, prob meas1 prop0') and gate errors (Pauli-X, ECR) all show a slight relationship with each other.
 
 ### 4. ECR Plot
-<p align="center>
+<p align="center">
   <img src="https://github.com/AuroraArc/qubit-feature-analysis/blob/main/images/scatterplot.png" />
 </p>
 
-
+The negative 'ECR error value' is attributed to feature scaling. From the graph, it is clear that there is massive variation observed between predicted and actual values, which suggests. Some data outliers could have influenced lower evaluation metrics.
 
 ## Discussion
+### 1. Weak Predictive Power and Correlations
+The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomials models. Despite this limitation, a stronger correlation among qubits compared to correlations across time was found. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
+
+### 2. Limitations
+#### 2.1 Limited Dataset
+A significant limitation of this study is the size of the data, especially for the 127-qubit systems. This is because IBM requires a subscription to their paid plan to access the backends of their quantum systems. The limited data availability may have constrained the model's ability to discern underlying patterns and relationships accurately.
+
+#### 2.2 Potential Noise and Data Cleaning Issues
+The dataset's potential inclusion of noise or inadequate cleaning processes adds another layer ot complexity to the interpretation of the results. Ensuring data integrity is critical, and future studies should aim for larger, more comprehensive datasets to enhance the robustness of the analyses.
+
+### 3. Discrepancy Between Correlation Matrix and Error Coefficients
+#### 3.1 Correlation Matrix
+An intriguing aspect arises from the examination of the correlation matrix, which suggests a good relationship between certain qubit features.
+#### 3.2 Error Coefficients
+Contrastingly, the error coefficients paints a different picture, indicating a less favorable relationship, which is evident in the poor evaluation metrics. This discrepancy warrants further investigation into the nuances of the relationships.
+
+### 4. Future Directions
+#### 4.1 Understanding Relationship Discrepancy
+Investigating the inconsistency between the correlation matrix and error coefficients should be a first priority in future research. Understanding the underlying reasons for this divergence may unveil crucial insights into the nature of qubit features and their impact on error rates.
+#### 4.2 Mitigating Errors
+Despite the current limitations, the exploration of relationships between qubit features and error rates holds promise for mitigating error in quantum computations. Future studies can build upon these findings, incorporating more extensive datasets and refining models to enhance predictive capabilities.
+
+## Conclusion
+In conclusion, while the present study reveals limitation in predictive power, it lays the groundwork for future investigations. Addressing these limitation and refining methodologies will be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
+
 ## References
+[1] “What Is Quantum Computing?” Caltech Science Exchange, https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers. Accessed 6 Dec. 2023.
+
+[2] Preskill, John. “Quantum Computing in the NISQ Era and Beyond.” Quantum, vol. 2, Aug. 2018, p.79. Crossref, https://doi.org/10.22331/q-2018-08-06-79.
+
+[3] Engdahl, Sylvia. “Noise in Quantum Computing.” Amazon, Greenhaven Press/Gale, 2008,
+https://aws.amazon.com/blogs/quantum-computing/noise-in-quantum-computing/
+
+[4] Qiskit documentation. Version 0.45.0 https://docs.quantum.ibm.com/api/qiskit
+
+[5] B. Baheri, Q. Guan, V. Chaudhary and A. Li, "Quantum Noise in the Flow of Time: A Temporal Study of the Noise in Quantum Computers," 2022 IEEE 28th International Symposium on On-Line Testing and Robust System Design (IOLTS), Torino, Italy, 2022, pp. 1-5, doi: 10.1109/IOLTS56730.2022.9897404.
+
+[6] scikit-learn documentation. Version 1.3.2. https://scikit-learn.org/stable/modules/linear_model.html
+
