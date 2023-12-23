@@ -1,5 +1,5 @@
 # Understanding the Influence of Qubit Features on Error Rates
-This is the compilation of the first of two semesters of a solo research project conduct by me under the guidance of Dr.Nicholas LaRacuente (nlaracu@iu.edu) during the fall 2023 semester, which will continue into the spring 2024 semester.
+This is the compilation of the first of two semesters of a solo research project conduct by me under the guidance of Dr. Nicholas LaRacuente (nlaracu@iu.edu) during the fall 2023 semester, which will continue into the spring 2024 semester.
 
 
 ## Abstract
@@ -77,7 +77,7 @@ The optimal $\alpha$-regularization parameter value was determined to be $0.07$.
   * The inconclusive nature of the RMSE results is attributed to the small range of values.
   * Optimal RMSE score = $0$
 #### 1.3 Implications
-The results show that qubit data over time is not predictive of error rate.
+The results suggest that qubit data over time is not predictive of error rate.
 
 ### 2. ECR Prediction Across Qubits
 #### 2.1 Optimal $\alpha$-Regularization
@@ -106,7 +106,7 @@ The negative 'ECR error value' is attributed to feature scaling. From the graph,
 
 ## Discussion
 ### 1. Weak Predictive Power and Correlations
-The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomial models. Despite this limitation, a stronger correlation among qubits compared to across time was found. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
+The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomial models. Despite this limitation, a stronger correlation was observed when using an individual qubit as a datapoint rather than every time period being a datapoint. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
 
 ### 2. Limitations
 #### 2.1 Limited Dataset
@@ -128,7 +128,7 @@ Investigating the inconsistency between the correlation matrix and error coeffic
 Despite the current limitations, the exploration of relationships between qubit features and error rates holds promise for mitigating error in quantum computations. Future studies can build upon these findings, incorporating more extensive datasets and refining models to enhance predictive capabilities.
 
 ## Conclusion
-In conclusion, while the present study reveals limitation in predictive power, it lays the groundwork for future investigations. Addressing these limitations and refining methodologies could be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
+In conclusion, while the present study reveals limitations in predictive power, it lays the groundwork for future investigations. Addressing these limitations and refining methodologies could be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
 
 ## References
 [1] “What Is Quantum Computing?” Caltech Science Exchange, https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers. Accessed 6 Dec. 2023.
