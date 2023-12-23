@@ -106,7 +106,7 @@ The negative 'ECR error value' is attributed to feature scaling. From the graph,
 
 ## Discussion
 ### 1. Weak Predictive Power and Correlations
-The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomial models. Despite this limitation, a stronger correlation was observed when using an individual qubit as a datapoint rather than every time period being a datapoint. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
+The analysis of qubit features revealed a weak predictive power for error rates, particularly when utilizing linear and low-order polynomial models. Despite this limitation, a stronger correlation was observed when using an individual qubit as a datapoint rather than every time interval. This emphasizes the complex interactions between qubits and the challenges associated with predicting error rates solely based on temporal data.
 
 ### 2. Limitations
 #### 2.1 Limited Dataset
