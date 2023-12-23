@@ -35,9 +35,9 @@ One 7-qubit processor and seven 127-qubit processors were utilized:
 ### 2. Preprocessing
 #### 2.1 Qubit Features
 The following qubit features were considered [5]:
- * Decoherence time (T1 and T2)
- * Frequency, anharmonicity
- * Readout assignment error ('prob meas0 prop1' and 'prob meas1 prop0'), readout length
+ * decoherence time (T1 and T2)
+ * frequency, anharmonicity
+ * readout assignment error ('prob meas0 prop1' and 'prob meas1 prop0'), readout length
  * gate time
  * ID, rz, sx, Pauli-X (NOT gate), reset, √x gate errors
  * controlled NOT (CNOT) gate error (exclusive to 7-qubit)
@@ -119,7 +119,7 @@ The dataset's potential inclusion of noise or inadequate cleaning processes adds
 #### 3.1 Correlation Matrix
 An intriguing aspect arises from the examination of the correlation matrix, which suggests a good relationship between certain qubit features.
 #### 3.2 Error Coefficients
-Contrastingly, the error coefficients paints a different picture, indicating a less favorable relationship, which is evident in the poor evaluation metrics. This discrepancy warrants further investigation into the nuances of the relationships.
+On the other hand, the error coefficients depict a contrasting scenario, suggesting a less favorable relationship as reflected in the poor evaluation metrics. This discrepancy warrants further investigation into the nuances of the relationships.
 
 ### 4. Future Directions
 #### 4.1 Understanding Relationship Discrepancy
@@ -128,7 +128,7 @@ Investigating the inconsistency between the correlation matrix and error coeffic
 Despite the current limitations, the exploration of relationships between qubit features and error rates holds promise for mitigating error in quantum computations. Future studies can build upon these findings, incorporating more extensive datasets and refining models to enhance predictive capabilities.
 
 ## Conclusion
-In conclusion, while the present study reveals limitation in predictive power, it lays the groundwork for future investigations. Addressing these limitation and refining methodologies could be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
+In conclusion, while the present study reveals limitation in predictive power, it lays the groundwork for future investigations. Addressing these limitations and refining methodologies could be crucial for advancing our understanding of the intricate relationships between qubit features and error rates in quantum computing.
 
 ## References
 [1] “What Is Quantum Computing?” Caltech Science Exchange, https://scienceexchange.caltech.edu/topics/quantum-science-explained/quantum-computing-computers. Accessed 6 Dec. 2023.
